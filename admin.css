@@ -1,0 +1,661 @@
+/* ==========================================
+   CAMPUS VIBES 2026
+   ADMIN DASHBOARD STYLESHEET
+   ========================================== */
+
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #0b1020;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   LOGIN PAGE
+   ========================================== */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: linear-gradient(135deg,
+            #0b1020,
+            #241447,
+            #11182b);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px 35px;
+
+    background: #19243d;
+    border: 1px solid #394866;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.login-box h1 span {
+    color: #a855f7;
+}
+
+.login-box h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.login-box>p {
+    color: #aab4c8;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.login-box form {
+    text-align: left;
+}
+
+.login-box label {
+    display: block;
+    margin: 17px 0 8px;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 13px;
+
+    background: #0b1020;
+    border: 1px solid #394866;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+
+    background: #9333ea;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #7e22ce;
+    transform: translateY(-2px);
+}
+
+#loginMessage {
+    margin-top: 15px;
+    color: #f87171;
+    text-align: center;
+}
+
+.demo-info {
+    background: #11182b;
+    border: 1px dashed #a855f7;
+    border-radius: 8px;
+
+    padding: 13px;
+    margin-top: 25px;
+
+    font-size: 13px;
+    line-height: 1.8;
+    color: #c084fc;
+}
+
+
+/* ==========================================
+   ADMIN HEADER
+   ========================================== */
+
+.admin-header {
+    background: #11182b;
+
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #29344d;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admin-header h2 {
+    font-size: 25px;
+    color: white;
+}
+
+.admin-header h2 span {
+    color: #a855f7;
+}
+
+.admin-header button {
+    background: #dc2626;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 11px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-header button:hover {
+    background: #b91c1c;
+}
+
+
+/* ==========================================
+   DASHBOARD MAIN CONTENT
+   ========================================== */
+
+.admin-content {
+    max-width: 1450px;
+    margin: auto;
+    padding: 40px 6%;
+}
+
+.admin-content>h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aab4c8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   STATISTICS SECTION
+   ========================================== */
+
+.stats-section {
+    margin-bottom: 55px;
+}
+
+.stats-section>h2,
+.records-section>h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #e9d5ff;
+}
+
+.stats-section>h2 i,
+.records-section>h2 i {
+    color: #a855f7;
+    margin-right: 8px;
+}
+
+.stats-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.stat-card {
+    background: linear-gradient(145deg,
+            #19243d,
+            #11182b);
+
+    padding: 25px 20px;
+
+    border: 1px solid #29344d;
+    border-radius: 13px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.12);
+}
+
+.stat-card>i {
+    font-size: 30px;
+    color: #c084fc;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.total-card {
+    background: linear-gradient(135deg,
+            #6b21a8,
+            #31205c);
+}
+
+.total-card>i,
+.total-card h3,
+.total-card p {
+    color: white;
+}
+
+
+/* ==========================================
+   REGISTRATION RECORDS
+   ========================================== */
+
+.records-section {
+    background: #11182b;
+
+    padding: 28px;
+
+    border: 1px solid #29344d;
+    border-radius: 14px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls input,
+.controls select {
+    padding: 13px;
+
+    background: #0b1020;
+    border: 1px solid #394866;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.controls input {
+    flex: 1;
+    min-width: 0;
+}
+
+.controls select {
+    min-width: 210px;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #a855f7;
+}
+
+.controls input::placeholder {
+    color: #8995aa;
+}
+
+
+/* ==========================================
+   REGISTRATION TABLE
+   ========================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+
+    border-radius: 8px;
+    border: 1px solid #29344d;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+
+    border-collapse: collapse;
+    background: #19243d;
+}
+
+thead {
+    background: #30204f;
+}
+
+th {
+    padding: 16px 13px;
+
+    color: #e9d5ff;
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 13px;
+
+    border-bottom: 1px solid #29344d;
+
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #243252;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   ADMIN ACTION BUTTONS
+   ========================================== */
+
+.admin-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.admin-actions button {
+    padding: 13px 20px;
+
+    background: #16a34a;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-actions button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #aab4c8;
+    padding: 25px 10px;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLETS
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-content {
+        padding: 35px 4%;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .admin-header {
+        padding: 17px 5%;
+    }
+
+    .admin-header h2 {
+        font-size: 19px;
+    }
+
+    .admin-header button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .admin-content {
+        padding: 28px 4%;
+    }
+
+    .admin-content>h1 {
+        font-size: 27px;
+    }
+
+    .stats-section>h2,
+    .records-section>h2 {
+        font-size: 21px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 22px;
+    }
+
+    .records-section {
+        padding: 18px 12px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .admin-actions button {
+        width: 100%;
+    }
+
+}
+
+/* =====================================
+   ADMIN SEAT MANAGEMENT
+===================================== */
+
+.seat-management {
+    margin: 35px 0 50px;
+}
+
+.seat-management h2 {
+    font-size: 25px;
+    color: #e9d5ff;
+    margin-bottom: 22px;
+}
+
+.seat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.seat-card {
+    background: linear-gradient(145deg, #19243d, #11182b);
+    border: 1px solid #394866;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.seat-card h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.seat-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.seat-card .seat-card-status {
+    font-weight: bold;
+}
+
+.admin-seat-progress {
+    width: 100%;
+    height: 8px;
+    background: #394866;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.admin-seat-bar {
+    height: 100%;
+    background: #22c55e;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .seat-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .seat-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   EVENT MANAGEMENT - VISIBILITY FIX
+========================================== */
+
+#eventRegistrationControls {
+    background: #11182b !important;
+    color: #ffffff !important;
+}
+
+#eventRegistrationControls h2 {
+    color: #e9d5ff !important;
+}
+
+#eventRegistrationControls p {
+    color: #cbd5e1;
+}
+
+#eventControlCards>div {
+    background: #19243d !important;
+    border: 1px solid #394866 !important;
+}
+
+#eventControlCards h3 {
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#eventControlCards label {
+    color: #e2e8f0 !important;
+    display: block;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#eventControlCards input,
+#eventControlCards textarea {
+    background: #0b1020 !important;
+    color: #ffffff !important;
+    border: 1px solid #52617e !important;
+    padding: 10px;
+    width: 100%;
+}
+
+#eventControlCards input:focus,
+#eventControlCards textarea:focus {
+    border-color: #a855f7 !important;
+    outline: none;
+}
+
+#eventControlCards button {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* FIX RESET BUTTON DISABLED TEXT VISIBILITY */
+
+#eventControlCards button:disabled {
+    background-color: #e2e8f0 !important;
+    color: #334155 !important;
+    opacity: 1 !important;
+    border: 1px solid #cbd5e1 !important;
+    cursor: not-allowed;
+}

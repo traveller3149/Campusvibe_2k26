@@ -1,0 +1,653 @@
+/* =====================================
+   CAMPUS VIBES 2026 - COMPLETE CSS
+   ===================================== */
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1020;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+   ===================================== */
+
+header {
+    background-color: #11182b;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+
+/* =====================================
+   HOME / HERO SECTION
+   ===================================== */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background: linear-gradient(120deg,
+            #11182b,
+            #31205c,
+            #0b1020);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #c084fc;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #a855f7;
+}
+
+.hero-content>p:not(.tagline) {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #9333ea;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7e22ce;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   ABOUT SECTION
+   ===================================== */
+
+.about {
+    padding: 75px 8%;
+    text-align: center;
+    background: #f4f4f9;
+    color: #222;
+}
+
+.about h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #24143f;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
+}
+
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.about-highlights div {
+    background: white;
+    padding: 25px 40px;
+    min-width: 170px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.about-highlights div:hover {
+    transform: translateY(-5px);
+}
+
+.about-highlights h3 {
+    color: #6c35d4;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.about-highlights p {
+    margin: 0;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   EVENTS SECTION
+   ===================================== */
+
+.events {
+    padding: 80px 8%;
+    text-align: center;
+    background: #0b1020;
+}
+
+.events h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.section-description {
+    color: #aab4c8;
+    margin-bottom: 45px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* EVENT GRID */
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* EVENT CARD */
+
+.event-card {
+    background: linear-gradient(145deg,
+            #19243d,
+            #11182b);
+
+    padding: 32px 25px;
+    border-radius: 16px;
+    border: 1px solid #29344d;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s;
+    min-height: 380px;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    border-color: #a855f7;
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.15);
+}
+
+/* EVENT ICONS */
+
+.event-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+
+    border-radius: 50%;
+
+    font-size: 34px;
+    color: #c084fc;
+
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+.event-card:hover .event-icon {
+    background: #9333ea;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* EVENT TITLE */
+
+.event-card h3 {
+    font-size: 22px;
+    margin-bottom: 13px;
+    color: white;
+}
+
+/* EVENT DESCRIPTION */
+
+.event-card>p {
+    color: #aab4c8;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* EVENT DATE AND VENUE */
+
+.event-info {
+    width: 100%;
+    margin: 10px 0 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.event-info p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.event-info strong {
+    color: #c084fc;
+}
+
+/* EVENT REGISTER BUTTON */
+
+.event-card button {
+    background: #9333ea;
+    color: white;
+
+    border: none;
+    padding: 12px 22px;
+
+    border-radius: 7px;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.event-card button:hover {
+    background: #7e22ce;
+    transform: scale(1.04);
+}
+
+
+/* =====================================
+   REGISTRATION SECTION
+   ===================================== */
+
+.registration {
+    padding: 80px 20px;
+    background: #11182b;
+    text-align: center;
+}
+
+.registration h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #aab4c8;
+    margin-bottom: 35px;
+}
+
+.registration form {
+    max-width: 550px;
+    margin: auto;
+
+    background: #1a2540;
+    padding: 35px;
+
+    border-radius: 14px;
+    border: 1px solid #29344d;
+
+    text-align: left;
+}
+
+.registration label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.registration input,
+.registration select {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #394866;
+    border-radius: 7px;
+
+    background: #0b1020;
+    color: white;
+
+    outline: none;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.registration input:focus,
+.registration select:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+}
+
+.registration input::placeholder {
+    color: #8995aa;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+
+    background: #9333ea;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #7e22ce;
+    transform: translateY(-2px);
+}
+
+/* SUCCESS MESSAGE */
+
+#successMessage {
+    margin-top: 20px;
+    color: #4ade80;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* =====================================
+   CONTACT SECTION
+   ===================================== */
+
+.contact {
+    padding: 65px 20px;
+    text-align: center;
+    background: #17152b;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.contact>p {
+    color: #cbd5e1;
+}
+
+.contact-details {
+    margin-top: 25px;
+    line-height: 2.2;
+    color: #aab4c8;
+}
+
+.contact-details strong {
+    color: #c084fc;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    background: #080d19;
+    text-align: center;
+    padding: 35px 15px;
+    color: #aab4c8;
+    line-height: 2;
+}
+
+footer h3 {
+    color: white;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN - TABLETS
+   ===================================== */
+
+@media (max-width: 1000px) {
+
+    .event-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN - MOBILE
+   ===================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 16px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 65px 7%;
+    }
+
+    .tagline {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content>p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .about,
+    .events {
+        padding: 60px 6%;
+    }
+
+    .about h2,
+    .events h2,
+    .registration h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .about-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-highlights div {
+        width: 85%;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .event-card {
+        min-height: 350px;
+        padding: 28px 22px;
+    }
+
+    .registration {
+        padding: 60px 15px;
+    }
+
+    .registration form {
+        padding: 25px 18px;
+    }
+
+    .contact {
+        padding: 50px 15px;
+    }
+}
+
+/* =====================================
+   SEAT AVAILABILITY DESIGN
+===================================== */
+
+.seat-availability {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.seat-status {
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.seat-progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.seat-progress-bar {
+    height: 100%;
+    background: #22c55e;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.event-card button:disabled {
+    background: #777777;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* =====================================
+   END OF CAMPUS VIBES CSS
+   ===================================== */

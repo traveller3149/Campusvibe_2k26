@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Vibes | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         ADMIN LOGIN SECTION
+    ================================== -->
+
+    <div class="login-container" id="loginSection">
+
+        <div class="login-box">
+
+            <h1>Campus<span>Vibes.</span></h1>
+
+            <h2>Admin Login</h2>
+
+            <p>Login to manage student registrations</p>
+
+            <form id="loginForm">
+
+                <label for="username">Username</label>
+
+                <input type="text" id="username" placeholder="Enter username" required>
+
+                <label for="password">Password</label>
+
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <button type="submit">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <p class="demo-info">
+                Demo Username: admin<br>
+                Demo Password: campus123
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         ADMIN DASHBOARD
+    ================================== -->
+
+    <div class="dashboard" id="dashboardSection">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <h2>
+                Campus<span>Vibes.</span> Admin
+            </h2>
+
+            <button id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </button>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-content">
+
+            <h1>Admin Dashboard</h1>
+
+            <p class="subtitle">
+                Manage and monitor all student registrations
+            </p>
+
+
+            <!-- =================================
+                 REGISTRATION STATISTICS
+            ================================== -->
+
+            <section class="stats-section">
+
+                <h2>
+                    <i class="fas fa-chart-bar"></i>
+                    Registration Statistics
+                </h2>
+
+                <div class="stats-container">
+
+
+                    <!-- TOTAL REGISTRATIONS -->
+
+                    <div class="stat-card total-card">
+
+                        <i class="fas fa-users"></i>
+
+                        <h3>Total Registrations</h3>
+
+                        <p id="totalCount">0</p>
+
+                    </div>
+
+
+                    <!-- TECH FEST -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-laptop-code"></i>
+
+                        <h3>Tech Fest</h3>
+
+                        <p id="techCount">0</p>
+
+                    </div>
+
+
+                    <!-- MUSIC BATTLE -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-music"></i>
+
+                        <h3>Music Battle</h3>
+
+                        <p id="musicCount">0</p>
+
+                    </div>
+
+
+                    <!-- ART COMPETITION -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-palette"></i>
+
+                        <h3>Art Competition</h3>
+
+                        <p id="artCount">0</p>
+
+                    </div>
+
+
+                    <!-- DANCE SHOWDOWN -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-person-running"></i>
+
+                        <h3>Dance Showdown</h3>
+
+                        <p id="danceCount">0</p>
+
+                    </div>
+
+
+                    <!-- PHOTOGRAPHY CONTEST -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-camera"></i>
+
+                        <h3>Photography Contest</h3>
+
+                        <p id="photoCount">0</p>
+
+                    </div>
+
+
+                    <!-- QUIZ CHALLENGE -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-brain"></i>
+
+                        <h3>Quiz Challenge</h3>
+
+                        <p id="quizCount">0</p>
+
+                    </div>
+
+
+                    <!-- GAMING TOURNAMENT -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-gamepad"></i>
+
+                        <h3>Gaming Tournament</h3>
+
+                        <p id="gamingCount">0</p>
+
+                    </div>
+
+
+                    <!-- FASHION FIESTA -->
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-shirt"></i>
+
+                        <h3>Fashion Fiesta</h3>
+
+                        <p id="fashionCount">0</p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 STUDENT REGISTRATION RECORDS
+            ================================== -->
+
+            <section class="records-section">
+
+                <h2>
+                    <i class="fas fa-clipboard-list"></i>
+                    Student Registrations
+                </h2>
+
+
+                <!-- SEARCH AND FILTER -->
+
+                <div class="controls">
+
+                    <input type="text" id="searchInput" placeholder="Search student or registration number">
+
+
+                    <select id="eventFilter">
+
+                        <option value="All">All Events</option>
+
+                        <option value="Tech Fest">Tech Fest</option>
+
+                        <option value="Music Battle">Music Battle</option>
+
+                        <option value="Art Competition">Art Competition</option>
+
+                        <option value="Dance Showdown">Dance Showdown</option>
+
+                        <option value="Photography Contest">Photography Contest</option>
+
+                        <option value="Quiz Challenge">Quiz Challenge</option>
+
+                        <option value="Gaming Tournament">Gaming Tournament</option>
+
+                        <option value="Fashion Fiesta">Fashion Fiesta</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- REGISTRATION TABLE -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Reg. Number</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Department</th>
+                                <th>Event</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="registrationTable">
+
+                            <!-- Records will be displayed using JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- ADMIN ACTIONS -->
+
+                <div class="admin-actions">
+
+                    <button id="exportBtn">
+                        <i class="fas fa-file-csv"></i>
+                        Download CSV
+                    </button>
+
+                </div>
+
+
+                <!-- EMPTY MESSAGE -->
+
+                <p id="emptyMessage">
+                </p>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
